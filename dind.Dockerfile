@@ -4,6 +4,7 @@ RUN apk add \
     jq      \
     make    \
     git     \
+    git-lfs \
     fossil  \
     openssh-client \
     docker \
