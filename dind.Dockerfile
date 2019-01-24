@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
-RUN export DEBIAN_FRONTEND=noninteractive \
-    apt-get update -qq && \
+ENV DEBIAN_FRONTEND="noninteractive"
+RUN apt-get update -qq && \
     apt-get install -qqyy \
     curl    \
     jq      \
