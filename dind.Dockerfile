@@ -1,5 +1,6 @@
 FROM ubuntu:bionic
-RUN apt update -qq && apt install -qqyy \
+RUN apt-get update -qq && \
+    apt-get install -qqyy \
     curl    \
     jq      \
     make    \
@@ -9,5 +10,6 @@ RUN apt update -qq && apt install -qqyy \
     fossil  \
     openssh-client \
     docker \
-    py-pip && \
+    python-pip && \
+    apt-get clean && \
     pip install docker-compose ansible
