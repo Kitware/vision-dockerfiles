@@ -1,14 +1,15 @@
-FROM alpine:latest
-RUN apk add \
+FROM ubuntu:bionic
+RUN apt update -qq && apt install -qqyy \
     curl    \
     jq      \
     make    \
     rsync   \
-    ansible \
     git     \
     git-lfs \
     fossil  \
     openssh-client \
     docker \
     py-pip && \
-    pip install docker-compose
+    pip install \
+    docker-compose \
+    ansible
