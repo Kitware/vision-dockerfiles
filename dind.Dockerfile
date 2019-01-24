@@ -4,11 +4,10 @@ RUN apk add \
     jq      \
     make    \
     rsync   \
-    ansible \
     git     \
     git-lfs \
     fossil  \
     openssh-client \
     docker \
     py-pip && \
-    pip install docker-compose
+    pip install docker-compose ansible
