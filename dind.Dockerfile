@@ -3,6 +3,8 @@ RUN apk add \
     curl    \
     jq      \
     make    \
+    rsync   \
+    ansible \
     git     \
     git-lfs \
     fossil  \
