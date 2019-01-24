@@ -10,6 +10,4 @@ RUN apt update -qq && apt install -qqyy \
     openssh-client \
     docker \
     py-pip && \
-    pip install \
-    docker-compose \
-    ansible
+    pip install docker-compose ansible
