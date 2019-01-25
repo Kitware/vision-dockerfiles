@@ -1,16 +1,18 @@
-FROM ubuntu:bionic
-ENV DEBIAN_FRONTEND="noninteractive"
-RUN apt-get update -qq && \
-    apt-get install -qqyy \
-    curl    \
-    jq      \
-    make    \
+FROM alpine:latest
+RUN apk add \
+    make \
     rsync   \
     git     \
     git-lfs \
     fossil  \
     openssh-client \
     docker \
-    python-pip && \
-    apt-get clean && \
-    pip install docker-compose ansible
+    python-dev \
+    py-pip \
+    musl-dev \
+    openssl-dev \
+    libffi-dev \
+    gcc && \
+    pip install --upgrade pip && \
+    pip install docker-compose ansible && \
+    apk del gcc make
