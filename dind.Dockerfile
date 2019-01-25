@@ -1,13 +1,18 @@
 FROM alpine:latest
 RUN apk add \
-    curl    \
-    jq      \
-    make    \
+    make \
     rsync   \
     git     \
     git-lfs \
     fossil  \
     openssh-client \
     docker \
-    py-pip && \
-    pip install docker-compose ansible
+    python-dev \
+    py-pip \
+    musl-dev \
+    openssl-dev \
+    libffi-dev \
+    gcc && \
+    pip install --upgrade pip && \
+    pip install docker-compose ansible && \
+    apk del gcc make
