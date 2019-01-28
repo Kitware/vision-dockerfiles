@@ -1,5 +1,6 @@
 FROM alpine:latest
 RUN apk add \
+    tar \
     make \
     rsync   \
     git     \
@@ -15,4 +16,4 @@ RUN apk add \
     gcc && \
     pip install --upgrade pip && \
     pip install docker-compose ansible && \
-    apk del gcc make
+    apk del gcc
