@@ -1,6 +1,7 @@
 FROM alpine:latest
 RUN apk add         \
     tar             \
+    gzip            \
     make curl jq    \
     rsync           \
     git             \
