@@ -1,5 +1,6 @@
 FROM koalaman/shellcheck-alpine:v0.6.0
 RUN apk add         \
+    bash            \
     curl            \
     python-dev      \
     py-pip          \
