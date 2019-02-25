@@ -2,7 +2,7 @@ FROM koalaman/shellcheck-alpine:v0.6.0
 RUN apk add         \
     bash            \
     curl            \
-    diff            \
+    diffutils       \
     file            \
     python-dev      \
     py-pip          \
