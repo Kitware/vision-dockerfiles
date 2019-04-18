@@ -16,5 +16,5 @@ RUN apk add         \
     libffi-dev      \
     gcc &&          \
     pip install --upgrade pip && \
-    pip install docker-compose ansible black && \
+    pip install docker-compose ansible && \
     apk del gcc
