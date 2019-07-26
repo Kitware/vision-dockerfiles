@@ -16,5 +16,5 @@ RUN apk add         \
     libffi-dev      \
     gcc &&          \
     pip install --upgrade pip && \
-    pip install docker-compose==1.23.2 ansible girder-client && \
+    pip install docker-compose==1.23.2 ansible==2.7.10 girder-client && \
     apk del gcc
